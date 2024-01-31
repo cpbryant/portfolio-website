@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Channing Bryant</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about"> About </a></li>
+          <li><a href="#experience"> Experience </a></li>
+          <li><a href="#projects"> Projects </a></li>
+          <li><a href="#contact"> Contact </a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Channing Bryant</div>
+      <div class="=hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()"> About </a></li>
+          <li><a href="#experience" onclick="toggleMenu()"> Experience </a></li>
+          <li><a href="#projects" onclick="toggleMenu()"> Projects </a></li>
+          <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/profile-pic.png"
+          alt="Channing Bryant profile
+        picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section_text__p1">Hello, I'm</p>
+        <h1 class="title">Channing Bryant</h1>
+        <p class="section__text__p2">Full Stack Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/channing-bryant-resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https:www.linkedin.com/in/channing-bryant'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/cpbryant'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get to Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile Picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience Icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                2+ Years <br />
+                FrontEnd Development
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education Icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Sc.B. Candidate in Computer Science and Economics</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              My name is Channing Bryant, and I am a driven, highly motivated,
+              and eager student at Brown University, where I am pursuing a
+              degree in Computer Science and Economics. I am a problem solver at
+              heart. The intersection between my double major fuels my
+              analytical mind and passion for technology-driven solutions. I
+              approach my programming and data analysis tasks with precision and
+              accuracy, while also considering the broader economic implications
+              of my work. The process of taking complex problems and breaking
+              them down into manageable solutions is what drives me. As I set
+              forth on my professional journey, I am excited to pursue
+              opportunities that enable me to create lasting positive change and
+              contribute to groundbreaking initiatives. I am devoted to
+              continuous learning and excel in fast-paced, team-oriented
+              settings. If you are in need of a committed and flexible problem
+              solver with a deep-seated enthusiasm for technology, let's connect
+              and explore the potential avenues we can embark upon together.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1"></p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Nodejs</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>API's</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Moderate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+                onclick="location.href='./#projects'"
+              />
+            </div>
+            <h2 class="experience-sub-title project-sub-title">Brown Bites</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+                onclick="location.href='./#projects'"
+              />
+            </div>
+            <h2 class="experience-sub-title project-sub-title">Pacman</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+                onclick="location.href='./#projects'"
+              />
+            </div>
+            <h2 class="experience-sub-title project-sub-title">Maps</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow Icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email Icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:channing_bryant@brown.edu"
+              >channing_bryant@brown.edu</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn Icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/channing-bryant">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about"> About </a></li>
+            <li><a href="#experience"> Experience </a></li>
+            <li><a href="#projects"> Projects </a></li>
+            <li><a href="#contact"> Contact </a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Channing Bryant. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
