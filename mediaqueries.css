@@ -2,12 +2,18 @@
 
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+    gap: 4rem;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
   }
 
   .about-containers {
     flex-wrap: wrap;
+  }
+  
+  section {
+    margin: 0 auto;
+    padding: 3rem 2rem;
   }
 }
 
@@ -35,12 +41,18 @@
     height: fit-content;
   }
   section {
-    margin: 0 5%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
   }
   .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
+  }
+  
+  #profile {
+    gap: 2rem;
+    padding: 2rem 0;
   }
   .about-containers {
     margin-top: 0;
@@ -78,7 +90,7 @@
     height: 40vh;
   }
   #profile {
-    height: 83vh;
+    padding: 2rem 0;
     margin-bottom: 0;
   }
   article {
@@ -113,7 +125,7 @@
   }
   .section__pic-container {
     width: auto;
-    height: 46vh;
+    height: 300px;
     justify-content: center;
   }
   .section__text__p2 {

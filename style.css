@@ -162,15 +162,18 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 17vh;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 a {
@@ -227,6 +230,12 @@ a:hover {
 
 #hamburger-nav {
   display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 17vh;
 }
 
 .hamburger-menu {
@@ -306,26 +315,33 @@ a:hover {
 }
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  padding: 3rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
   box-sizing: border-box;
   min-height: fit-content;
 }
 
-/* Mobile viewport height fix */
-@supports (height: 100vh) {
-  section {
-    height: calc(var(--vh, 1vh) * 96);
-  }
-  
-  #profile {
-    height: calc(var(--vh, 1vh) * 80);
-  }
-  
-  #contact {
-    min-height: calc(var(--vh, 1vh) * 70);
-  }
+/* Section spacing improvements */
+#profile {
+  padding: 4rem 0;
+  min-height: 70vh;
+}
+
+#about {
+  padding: 4rem 0;
+}
+
+#experience {
+  padding: 4rem 0;
+}
+
+#projects {
+  padding: 4rem 0;
+}
+
+#contact {
+  padding: 4rem 0;
 }
 
 .section-container {
@@ -338,8 +354,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30rem;
-  height: 80vh;
+  gap: 8rem;
 }
 
 .section__pic-container {
@@ -360,6 +375,7 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .section__text__p2 {
@@ -370,6 +386,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 #socials-container {
@@ -441,7 +458,7 @@ section {
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .about-details-container {
@@ -662,8 +679,6 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 70vh;
-  padding-bottom: 4rem;
 }
 
 .contact-container {
@@ -799,13 +814,16 @@ article .icon {
 
 /* FOOTER SECTION */
 
-#footer {
-  height: 26vh;
-  margin: 0 1rem;
+footer {
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
 }
 
 footer p {
   text-align: center;
+  margin-top: 1rem;
 }
 
 /* Enhanced Animations */
