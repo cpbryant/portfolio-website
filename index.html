@@ -9,53 +9,80 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
+    <!-- Skip Navigation Links -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#desktop-nav" class="skip-link">Skip to navigation</a>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="scroll-progress-bar"></div>
+    </div>
+    
+    <!-- Floating Navigation Dots -->
+    <nav class="nav-dots" aria-label="Section navigation">
+      <button class="nav-dot active" data-section="profile" aria-label="Go to profile section"></button>
+      <button class="nav-dot" data-section="about" aria-label="Go to about section"></button>
+      <button class="nav-dot" data-section="experience" aria-label="Go to experience section"></button>
+      <button class="nav-dot" data-section="projects" aria-label="Go to projects section"></button>
+      <button class="nav-dot" data-section="contact" aria-label="Go to contact section"></button>
+    </nav>
+
+    <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
       <div class="logo">Channing Bryant</div>
       <div>
-        <ul class="nav-links">
-          <li><a href="#about"> About </a></li>
-          <li><a href="#experience"> Experience </a></li>
-          <li><a href="#projects"> Projects </a></li>
-          <li><a href="#contact"> Contact </a></li>
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a href="#about" role="menuitem"> About </a></li>
+          <li role="none"><a href="#experience" role="menuitem"> Experience </a></li>
+          <li role="none"><a href="#projects" role="menuitem"> Projects </a></li>
+          <li role="none"><a href="#contact" role="menuitem"> Contact </a></li>
         </ul>
       </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+      </button>
     </nav>
-    <nav id="hamburger-nav">
+    <nav id="hamburger-nav" role="navigation" aria-label="Mobile navigation">
       <div class="logo">Channing Bryant</div>
-      <div class="=hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()"> About </a></li>
-          <li><a href="#experience" onclick="toggleMenu()"> Experience </a></li>
-          <li><a href="#projects" onclick="toggleMenu()"> Projects </a></li>
-          <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
-        </div>
+      <div class="hamburger-menu">
+        <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <ul class="menu-links" role="menu" aria-hidden="true">
+          <li role="none"><a href="#about" onclick="toggleMenu()" role="menuitem"> About </a></li>
+          <li role="none"><a href="#experience" onclick="toggleMenu()" role="menuitem"> Experience </a></li>
+          <li role="none"><a href="#projects" onclick="toggleMenu()" role="menuitem"> Projects </a></li>
+          <li role="none"><a href="#contact" onclick="toggleMenu()" role="menuitem"> Contact </a></li>
+        </ul>
       </div>
-    </nav>
-    <section id="profile">
+      <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+      </button>
+          </nav>
+      
+      <main id="main-content">
+      <section id="profile" aria-labelledby="profile-heading">
       <div class="section__pic-container">
         <img
           src="./assets/profile-pic.png"
-          alt="Channing Bryant profile
-        picture"
+          alt="Channing Bryant profile picture"
+          loading="eager"
         />
       </div>
       <div class="section__text">
         <p class="section_text__p1">Hello, I'm</p>
-        <h1 class="title">Channing Bryant</h1>
-        <p class="section__text__p2">Full Stack Developer</p>
+        <h1 id="profile-heading" class="title">Channing Bryant</h1>
+        <p class="section__text__p2" aria-live="polite">Full Stack Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/channing-bryant-resume.pdf')"
+            aria-label="Download Channing Bryant's resume as PDF"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" onclick="location.href='./#contact'" aria-label="Navigate to contact section">
             Contact Info
           </button>
         </div>
@@ -64,7 +91,7 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https:www.linkedin.com/in/channing-bryant'"
+            onclick="location.href='https://www.linkedin.com/in/channing-bryant'"
           />
           <img
             src="./assets/github.png"
@@ -84,6 +111,7 @@
             src="./assets/about-pic.png"
             alt="Profile Picture"
             class="about-pic"
+            loading="lazy"
           />
         </div>
         <div class="about-details-container">
@@ -131,7 +159,7 @@
         src="./assets/arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
-        onclick="location.href='./experience'"
+        onclick="location.href='./#experience'"
       />
     </section>
     <section id="experience">
@@ -151,6 +179,9 @@
                 <div>
                   <h3>Java</h3>
                   <p>Advanced</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="90"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -162,6 +193,9 @@
                 <div>
                   <h3>Python</h3>
                   <p>Advanced</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="85"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -173,6 +207,9 @@
                 <div>
                   <h3>Nodejs</h3>
                   <p>Experienced</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="75"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -184,6 +221,9 @@
                 <div>
                   <h3>SQL</h3>
                   <p>Intermediate</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="70"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -195,6 +235,9 @@
                 <div>
                   <h3>API's</h3>
                   <p>Experienced</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="80"></div>
+                  </div>
                 </div>
               </article>
             </div>
@@ -211,6 +254,9 @@
                 <div>
                   <h3>HTML</h3>
                   <p>Intermediate</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="75"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -222,6 +268,9 @@
                 <div>
                   <h3>CSS</h3>
                   <p>Intermediate</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="70"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -233,6 +282,9 @@
                 <div>
                   <h3>JavaScript</h3>
                   <p>Moderate</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="65"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -244,6 +296,9 @@
                 <div>
                   <h3>React</h3>
                   <p>Intermediate</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="70"></div>
+                  </div>
                 </div>
               </article>
               <article>
@@ -255,6 +310,9 @@
                 <div>
                   <h3>Git</h3>
                   <p>Experienced</p>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-skill="80"></div>
+                  </div>
                 </div>
               </article>
             </div>
@@ -271,15 +329,25 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
+      
+      <!-- Project Filter Buttons -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn" data-filter="data">Data Science</button>
+      </div>
+      
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container project-card" data-category="web">
             <div class="article-container">
               <img
                 src="./assets/project-1.png"
                 alt="Project 1"
                 class="project-img"
                 onclick="location.href='./#projects'"
+                loading="lazy"
               />
             </div>
             <h2 class="experience-sub-title project-sub-title">Brown Bites</h2>
@@ -298,13 +366,14 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container project-card" data-category="mobile">
             <div class="article-container">
               <img
                 src="./assets/project-2.png"
                 alt="Project 2"
                 class="project-img"
                 onclick="location.href='./#projects'"
+                loading="lazy"
               />
             </div>
             <h2 class="experience-sub-title project-sub-title">Pacman</h2>
@@ -323,13 +392,14 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container project-card" data-category="data">
             <div class="article-container">
               <img
                 src="./assets/project-3.png"
                 alt="Project 3"
                 class="project-img"
                 onclick="location.href='./#projects'"
+                loading="lazy"
               />
             </div>
             <h2 class="experience-sub-title project-sub-title">Vacation Planner</h2>
@@ -354,38 +424,78 @@
         src="./assets/arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
-        onclick="location.href='./#projects'"
+        onclick="location.href='./#contact'"
       />
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email Icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a href="mailto:channing_bryant@brown.edu"
-              >channing_bryant@brown.edu</a
-            >
-          </p>
+      
+      <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info-section">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email Icon"
+              class="icon contact-icon email-icon"
+            />
+            <p>
+              <a href="mailto:channing_bryant@brown.edu"
+                >channing_bryant@brown.edu</a
+              >
+            </p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn Icon"
+              class="icon contact-icon"
+            />
+            <p>
+              <a href="https://www.linkedin.com/in/channing-bryant">LinkedIn</a>
+            </p>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn Icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/channing-bryant">LinkedIn</a>
-          </p>
+        
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message" id="name-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message" id="email-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required>
+              <span class="error-message" id="subject-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error-message" id="message-error"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-color-1">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;">Sending...</span>
+            </button>
+          </form>
         </div>
       </div>
     </section>
-    <footer>
+    </main>
+    
+    <footer role="contentinfo">
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">

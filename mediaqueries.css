@@ -45,6 +45,31 @@
   .about-containers {
     margin-top: 0;
   }
+  
+  /* Mobile-specific improvements */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .project-filters {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-dots {
+    right: 15px;
+    gap: 10px;
+  }
+  
+  .nav-dot {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -99,5 +124,60 @@
   }
   .text-container {
     text-align: justify;
+  }
+  
+  /* Touch-friendly improvements for mobile */
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 1rem 1.2rem;
+  }
+  
+  .icon {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .nav-dot {
+    width: 16px;
+    height: 16px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .theme-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+  }
+  
+  .hamburger-icon {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .filter-btn {
+    min-height: 44px;
+    padding: 0.8rem 1.2rem;
+  }
+  
+  /* Improve spacing for mobile */
+  .project-filters {
+    margin: 1.5rem 0;
+  }
+  
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .nav-dots {
+    display: none; /* Hide on very small screens */
   }
 }
