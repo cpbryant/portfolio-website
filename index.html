@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" id="theme-link" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
@@ -19,29 +19,32 @@
           <li><a href="#contact"> Contact </a></li>
         </ul>
       </div>
+      <div class="btn-container">
+        <button class="btn btn-color-2" id="theme-toggle" aria-label="Toggle theme">Theme</button>
+      </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Channing Bryant</div>
-      <div class="=hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()" role="button" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+        <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()"> About </a></li>
           <li><a href="#experience" onclick="toggleMenu()"> Experience </a></li>
           <li><a href="#projects" onclick="toggleMenu()"> Projects </a></li>
           <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
-        </div>
+          <li><button class="btn btn-color-2" id="theme-toggle-mobile" aria-label="Toggle theme">Theme</button></li>
+        </ul>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
         <img
           src="./assets/profile-pic.png"
-          alt="Channing Bryant profile
-        picture"
+          alt="Channing Bryant profile picture"
         />
       </div>
       <div class="section__text">
@@ -60,18 +63,20 @@
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https:www.linkedin.com/in/channing-bryant'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/cpbryant'"
-          />
+          <a href="https://www.linkedin.com/in/channing-bryant" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+            />
+          </a>
+          <a href="https://github.com/cpbryant" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img
+              src="./assets/github.png"
+              alt="My GitHub profile"
+              class="icon"
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -131,7 +136,7 @@
         src="./assets/arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
-        onclick="location.href='./experience'"
+        onclick="location.href='./#experience'"
       />
     </section>
     <section id="experience">
@@ -380,7 +385,7 @@
             class="icon contact-icon"
           />
           <p>
-            <a href="https://www.linkedin.com/in/channing-bryant">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/channing-bryant" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
         </div>
       </div>
@@ -398,6 +403,6 @@
       </nav>
       <p>Copyright &#169; 2025 Channing Bryant. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

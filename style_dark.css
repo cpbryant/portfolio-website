@@ -2,15 +2,29 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root {
+  --color-text: #f4f4f4;
+  --color-text-muted: #c7c7c7;
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-border: #444;
+  --color-accent: #e5e5e5;
+  --radius-lg: 2rem;
+  --radius-md: 1rem;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.35);
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: black;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 html {
@@ -18,7 +32,8 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--color-text-muted);
+  line-height: 1.8;
 }
 
 /* TRANSITION */
@@ -44,20 +59,20 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 a {
-  color: black;
+  color: var(--color-text);
   text-decoration: none;
   text-decoration-color: white;
 }
 
 a:hover {
-  color: gray;
+  color: #aaa;
   text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-underline-offset: 0.25rem;
+  text-decoration-color: #666;
 }
 
 .logo {
@@ -91,29 +106,30 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
+  background-color: #f2f2f2;
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 .menu-links {
   position: absolute;
-  top: 10%;
-  right: 5;
-  background-color: white;
-  width: fit-content;
+  top: 120%;
+  right: 0;
+  background-color: var(--color-surface);
+  width: max-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 10px 16px;
   text-align: center;
-  font-size: 1.5rem;
-  color: black;
+  font-size: 1.125rem;
+  color: var(--color-text);
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -121,12 +137,13 @@ a:hover {
 }
 
 .menu-links.open {
-  min-height: 300px;
+  max-height: 320px;
+  padding: 8px 0;
 }
 
 /* First element */
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -134,7 +151,7 @@ a:hover {
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .hamburger-icon span:first-child {
@@ -150,7 +167,7 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: auto;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -166,7 +183,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 10rem;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .section__pic-container {
@@ -224,14 +241,17 @@ section {
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
-  border-radius: 2rem;
+  padding: 0.875rem 1rem;
+  width: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53);
+  border: 1px solid #888;
 }
 
 .btn-color-1:hover,
@@ -241,12 +261,12 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: #e6e6e6;
+  color: #000;
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: #fff;
 }
 
 .btn-color-2 {
@@ -282,7 +302,7 @@ section {
 }
 
 .about-pic {
-  border-radius: 2rem;
+  border-radius: var(--radius-lg);
 }
 
 .arrow {
@@ -294,10 +314,9 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: var(--color-border) 0.1rem solid;
   text-align: center;
 }
 
@@ -319,7 +338,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--color-text-muted);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -358,24 +377,25 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--color-border);
+  background: var(--color-surface);
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: var(--radius-lg);
   width: 90%;
   height: 90%;
+  object-fit: cover;
 }
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: white;
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: white;
+  border-color: #888;
 }
 
 /* CONTACTS SECTION */
@@ -390,10 +410,9 @@ article .icon {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background-color: #1a1a1a;
+  border-radius: var(--radius-lg);
+  border: var(--color-border) 0.1rem solid;
+  background-color: var(--color-surface);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -429,17 +448,16 @@ footer p {
   text-align: center;
 }
 
-
 .details-container,
 .color-container {
-  background-color: #1a1a1a;
-  border-color: #444;
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
 }
 
 a,
 .project-title,
 .project-btn {
-  color: white;
+  color: var(--color-text);
 }
 
 .project-btn {
