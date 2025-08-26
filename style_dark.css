@@ -199,6 +199,13 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section__pic-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
 }
 
 .section__text {
