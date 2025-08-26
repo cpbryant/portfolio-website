@@ -38,9 +38,10 @@
     margin: 0 5%;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
+    width: min(275px, 70vw);
+    height: min(275px, 70vw);
     margin: 0 auto 2rem;
+    aspect-ratio: 1;
   }
   .about-containers {
     margin-top: 0;
@@ -87,8 +88,10 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vh;
+    width: min(60vw, 250px);
+    height: min(60vw, 250px);
+    margin: 0 auto 2rem;
+    aspect-ratio: 1;
     justify-content: center;
   }
   .section__text__p2 {
