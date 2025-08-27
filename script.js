@@ -58,7 +58,7 @@ function toggleMenu() {
 
 // Typewriter Effect
 const typedText = document.querySelector(".section__text__p2");
-const phrases = ["Developer", "Product Manager", "Entrepreneur", "Data Scientist"];
+const phrases = ["CS Student", "Problem Solver", "Entrepreneur", "Data Scientist"];
 let currentPhrase = 0;
 let currentChar = 0;
 let isDeleting = false;
@@ -117,5 +117,3 @@ if (typeof IntersectionObserver === 'function') {
     section.style.transform = "none";
   });
 }
-
-
