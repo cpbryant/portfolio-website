@@ -121,6 +121,7 @@ a:hover {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 .menu-links a {
@@ -130,10 +131,22 @@ a:hover {
   font-size: 1.125rem;
   color: black;
   text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu-links a:hover {
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 .menu-links li {
   list-style: none;
+}
+
+.menu-links .btn {
+  margin: 8px 16px;
+  width: calc(100% - 32px);
 }
 
 .menu-links.open {
